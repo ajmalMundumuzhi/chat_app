@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 5px 0; }
+        #messages { height: 300px; overflow-y: scroll; border: 1px solid black; padding: 10px;  }
+        #form { display: flex; margin-top: 10px; }
+        #input { flex: 1; padding: 5px; border-color: white; color: black;}
+        #send { padding: 5px;  color: wheat; background-color: black;}
+        h1 {color: white;}
+        ul {color: white;}
+        body{background-color: black;}
+    </style>
+</head>
+<body>
+    <!-- <input type="range" name="" id=""> -->
+    <h1>Welcome to the chat app</h1>
+    <!-- became mentor -->
+    <button id="setMentor">Become a Mentor</button>
+    <div>
+        <!-- first form -->
+        <form id="createRoomForm">
+            <input type="text" id="createRoomInput" placeholder="Create Room (mentors only)">
+            <button>Create Room</button>
+        </form>
+        <!-- second form -->
+        <form id="joinRoomForm">
+            <input type="text" id="joinRoomInput" placeholder="Join Room">
+            <button>Join Room</button>
+        </form>
+    </div>
+    <ul id="roomMessages"></ul>
+    <ul id="messages"></ul>
+    <form id="form">
+        <input type="text" id="input" placeholder="Type a message...">
+        <button>Send</button>
+        <button id="toggle-btn">Disconnect</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
